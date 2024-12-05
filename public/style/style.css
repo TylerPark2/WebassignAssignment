@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #111;
+  font-family: Arial, sans-serif;
+}
+
+#gameCanvas {
+  position: absolute;
+}
+
+#hud {
+  position: fixed;
+  padding: 20px;
+  color: white;
+  user-select: none;
+  font-size: 18px;
+}
+
+#gameOver {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-size: 48px;
+  display: none;
+  text-align: center;
+}
+
+#restartBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background: #444;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+#restartBtn:hover {
+  background: #666;
+}
