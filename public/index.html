@@ -13,8 +13,21 @@
         Ammo: <span id="ammo">30</span>
     </div>
     <div id="gameOver">
-        Game Over<br>
-        <button id="restartBtn">Restart</button>
+        <div class="game-over-container">
+            <h2>Game Over</h2>
+            <div class="game-over-buttons">
+                <button id="restartBtn">Restart</button>
+                <button id="customizeBtn">Customize</button>
+            </div>
+            <div id="colorCustomizer" class="color-customizer">
+                <div class="color-controls">
+                    <label>Hue: <input type="range" id="hueSlider" min="0" max="360" value="0"></label>
+                    <label>Saturation: <input type="range" id="saturationSlider" min="0" max="100" value="100"></label>
+                    <label>Lightness: <input type="range" id="lightnessSlider" min="0" max="100" value="50"></label>
+                </div>
+                <div id="colorPreview" class="color-preview"></div>
+            </div>
+        </div>
     </div>
     <script src="scripts/scripts.js"></script>
 </body>
