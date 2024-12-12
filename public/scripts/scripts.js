@@ -5,7 +5,40 @@ const scoreSpan = document.getElementById('score');
 const waveSpan = document.getElementById('wave');
 const ammoSpan = document.getElementById('ammo');
 const gameOverDiv = document.getElementById('gameOver');
-const restartBtn = document.getElementById('restartBtn');
+
+const customizeBtn = document.getElementById('customizeBtn');
+const colorCustomizer = document.getElementById('colorCustomizer');
+const hueSlider = document.getElementById('hueSlider');
+const saturationSlider = document.getElementById('saturationSlider');
+const lightnessSlider = document.getElementById('lightnessSlider');
+const colorPreview = document.getElementById('colorPreview');
+
+// Player color customization
+let playerColor = {
+  hue: 0,
+  saturation: 100,
+  lightness: 50
+};
+
+// Customize button toggle
+customizeBtn.addEventListener('click', () => {
+  colorCustomizer.classList.toggle('active');
+});
+
+// Color sliders update
+[hueSlider, saturationSlider, lightnessSlider].forEach(slider => {
+  slider.addEventListener('input', updatePlayerColor);
+});
+
+function updatePlayerColor() {
+  playerColor.hue = hueSlider.value;
+  playerColor.saturation = saturationSlider.value;
+  playerColor.lightness = lightnessSlider.value;
+
+  const hslColor = `hsl(${playerColor.hue}, ${playerColor.saturation}%, ${playerColor.lightness}%)`;
+  colorPreview.style.backgroundColor = hslColor;
+}
+
 
 let gameState = {
   player: {
@@ -206,7 +239,7 @@ function draw() {
   ctx.beginPath();
   ctx.arc(gameState.player.x, gameState.player.y,
     gameState.player.radius, 0, Math.PI * 2);
-  ctx.fillStyle = 'white';
+    ctx.fillStyle = `hsl(${playerColor.hue}, ${playerColor.saturation}%, ${playerColor.lightness}%)`;;
   ctx.fill();
 
   ctx.fillStyle = 'green';
@@ -287,6 +320,7 @@ function restartGame() {
   waveSpan.textContent = gameState.wave;
   ammoSpan.textContent = gameState.player.ammo;
   gameOverDiv.style.display = 'none';
+  colorCustomizer.classList.remove('active');
 
   lastSpawnTime = Date.now();
   lastPickupSpawn = Date.now();
