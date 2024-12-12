@@ -23,6 +23,7 @@ let playerColor = {
 // Customize button toggle
 customizeBtn.addEventListener('click', () => {
   colorCustomizer.classList.toggle('active');
+  updatePlayerColor();
 });
 
 // Color sliders update
@@ -240,8 +241,8 @@ function draw() {
   ctx.arc(gameState.player.x, gameState.player.y,
     gameState.player.radius, 0, Math.PI * 2);
     ctx.fillStyle = `hsl(${playerColor.hue}, ${playerColor.saturation}%, ${playerColor.lightness}%)`;;
-  ctx.fill();
-
+  ctx.fill()
+  
   ctx.fillStyle = 'green';
   for (let zombie of gameState.zombies) {
     ctx.beginPath();
