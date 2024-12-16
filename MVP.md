@@ -140,7 +140,7 @@
 - Combat Systems  
 - Zombie Behavior
 
-![Shooter 1](Shooter1.gif)
+![Shooter1](Shooter1.gif)
 
 ## Day 3-5 (Essential Features)
 
@@ -149,4 +149,4 @@
 - Resource Management  
 - Wave Progression
 
-![Shooter 2](Shooter2.gif)
+![Shooter2](Shooter2.gif)
