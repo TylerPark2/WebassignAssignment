@@ -4,33 +4,33 @@
 
 ### Player Movement
 
-**Priority:** P0
+**Priority:** P0  
 **Implementation Timeline:** Day 1-3
 
 **Core Requirements:**
 
-- WASD to move player
+- WASD to move player  
 - Shift to sprint
 
 **Technical Components:**
 
-- Working tick system (NOT based on framerate)
+- Working tick system (NOT based on framerate)  
 - Input manager
 
 ### Combat Systems
 
-**Priority:** P0
+**Priority:** P0  
 **Implementation Timeline:** Day 1-3
 
 **Core Requirements:**
 
-- Mouse aiming
+- Mouse aiming  
 - [Essential functionality 2]
 
 **Technical Components:**
 
-- Mouse controlled camera
-- Projectile/Raycast bullet system
+- Mouse controlled camera  
+- Projectile/Raycast bullet system  
 - Firing pattern/Procedural recoil
 
 **Simplifications:**
@@ -39,18 +39,18 @@
 
 ### Zombie Behavior
 
-**Priority:** P0
+**Priority:** P0  
 **Implementation Timeline:** Day 1-3
 
 **Core Requirements:**
 
-- Zombie pathfinding to the player
-- Movement patterns/abilities (L4D??)
+- Zombie pathfinding to the player  
+- Movement patterns/abilities (L4D??)  
 - Progressively scaling difficulty
 
 **Technical Components:**
 
-- Pathfinding system
+- Pathfinding system  
 - Difficulty variables
 
 **Simplifications:**
@@ -59,7 +59,7 @@
 
 ### HUD
 
-**Priority:** P1
+**Priority:** P1  
 **Implementation Timeline:** Day 3-5
 
 **Core Requirements:**
@@ -68,17 +68,17 @@
 
 ### Lives and Health System
 
-**Priority:** P1
+**Priority:** P1  
 **Implementation Timeline:** Day 3-5
 
 **Core Requirements:**
 
-- Health depletes upon zombie contact
+- Health depletes upon zombie contact  
 - Game ends when health reaches 0
 
 **Technical Components:**
 
-- Object collision detection
+- Object collision detection  
 - Pickups
 
 **Simplifications:**
@@ -87,13 +87,13 @@
 
 **Dependencies:**
 
-- Zombie pathfinding
-- Zombie combat system
+- Zombie pathfinding  
+- Zombie combat system  
 - HUD
 
 ### Resource Management
 
-**Priority:** P1
+**Priority:** P1  
 **Implementation Timeline:** Day 3-5
 
 **Core Requirements:**
@@ -110,12 +110,12 @@
 
 **Dependencies:**
 
-- Health System
+- Health System  
 - HUD
 
 ### Wave Progression
 
-**Priority:** P1
+**Priority:** P1  
 **Implementation Timeline:** Day 3-5
 
 **Core Requirements:**
@@ -128,21 +128,25 @@
 
 **Dependencies:**
 
-- Zombie Behavior
-- HUD
+- Zombie Behavior  
+- HUD  
 - Resource Management
 
 # MVP Implementation Plan
 
 ## Day 1-3 (Core Framework)
 
-- Player Movement
-- Combat Systems
+- Player Movement  
+- Combat Systems  
 - Zombie Behavior
+
+![Shooter 1](Shooter%201.gif)
 
 ## Day 3-5 (Essential Features)
 
-- HUD
-- Lives and Health System
-- Resource Management
+- HUD  
+- Lives and Health System  
+- Resource Management  
 - Wave Progression
+
+![Shooter 2](Shooter%202.gif)
